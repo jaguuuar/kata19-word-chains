@@ -14,10 +14,10 @@ import com.kata.chain.repository.WordFileLoader;
 
 class FilterServiceImplTest  {
 		
-	WordFileLoader wordFileLoader = new WordFileLoader();
-	FilterServiceImpl filter = new FilterServiceImpl(wordFileLoader);
+	private WordFileLoader wordFileLoader = new WordFileLoader();
+	private FilterServiceImpl filter = new FilterServiceImpl(wordFileLoader);
 	
-	List<String> words = wordFileLoader.loadWords(4, "src/main/resources/wordlistTest2.txt");
+	private List<String> words = wordFileLoader.loadWords(4, "src/main/resources/wordlistTest2.txt");
 	
 	@Test
 	void testGetChildrenWord_Positive() {

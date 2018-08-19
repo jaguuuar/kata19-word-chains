@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 class WordFileLoaderTest {
 	
-	WordFileLoader fileReader = new WordFileLoader();
+	private WordFileLoader fileReader = new WordFileLoader();
 
 	@Test
 	void testLoadWords_WordLength_6() {
