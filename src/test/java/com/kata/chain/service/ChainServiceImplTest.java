@@ -36,15 +36,7 @@ class ChainServiceImplTest {
 		
 		assertThat(actual, is(expected));
 	}
-	
-	@Test
-	void testFindChain_PathExist() {
-		List<String> expected = Arrays.asList("cat", "cot", "cog", "dog");
-		List<String> actual = chain.findChain("cat", "dog");
 		
-		assertThat(actual, is(expected));
-	}
-	
 	@Test
 	void testFindChain_PathNotExist() {
 		List<String> expected = new ArrayList<>();
