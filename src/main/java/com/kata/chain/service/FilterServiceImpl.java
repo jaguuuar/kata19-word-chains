@@ -3,7 +3,7 @@ package com.kata.chain.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kata.chain.repository.WordFileLoader;
+import com.kata.chain.repository.FileLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,16 +11,16 @@ import java.util.List;
 @Service
 public class FilterServiceImpl implements FilterService {
 
-    private final WordFileLoader wordFileLoader;
+    private final FileLoader fileLoader;
 
     @Autowired
-    public FilterServiceImpl(WordFileLoader wordFileLoader) {
-        this.wordFileLoader = wordFileLoader;
+    public FilterServiceImpl(FileLoader fileLoader) {
+        this.fileLoader = fileLoader;
     }
 
     @Override
     public List<String> getWords(int length) {
-    	return wordFileLoader.loadWords(length);
+    	return fileLoader.loadWords(length);
     }
 
     @Override

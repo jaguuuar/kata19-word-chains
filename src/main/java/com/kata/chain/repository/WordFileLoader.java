@@ -32,6 +32,7 @@ public class WordFileLoader implements FileLoader {
         return wordList;
     }
 
+    @Override
     public List<String> loadWords(int wordLength) {
         return this.loadWords(wordLength, DEFAULT_FILE_PATH);
     }
