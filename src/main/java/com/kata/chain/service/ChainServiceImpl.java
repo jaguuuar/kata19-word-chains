@@ -23,13 +23,16 @@ public class ChainServiceImpl implements ChainService {
 
     @Override
     public List<String> findChain(String startWord, String endWord) {
+    	List<String> chain = new ArrayList<>();
+    	if(startWord.length() != endWord.length()) {
+    		return chain;
+    	}
+    	
         Map<String, String> wordTree = getWordTree(startWord, endWord);
-
         if (!wordTree.containsKey(endWord)) {
-            return new ArrayList<>();
+            return chain;
         }
 
-        List<String> chain = new ArrayList<>();
         String word = endWord;
         while (!word.equals(startWord)) {
             chain.add(0, word);
